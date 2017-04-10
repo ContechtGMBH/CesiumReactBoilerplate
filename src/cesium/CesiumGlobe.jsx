@@ -87,7 +87,7 @@ export default class CesiumGlobe extends Component {
         this.viewer.dataSources.add(this.signals);
         this.viewer.dataSources.add(this.platforms);
 
-
+        this.viewer.camera.flyTo({destination : Cesium.Cartesian3.fromDegrees(-8.484, 54.272, 1500.0)})
 
         // Force immediate re-render now that the Cesium viewer is created
         this.setState({viewerLoaded : true}); // eslint-disable-line react/no-did-mount-set-state
@@ -206,7 +206,7 @@ export default class CesiumGlobe extends Component {
                         <br/>
                         <br/>
                         <br/>
-                        
+
                         <button className="btn" onClick={this.zoomToDublin}>Fly to Dublin</button>
                         <br/>
                         <br/>
